@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>7.0</version>
+    <template_groups>
+        <template_group>
+            <uuid>7df96b18c230490a9a0a9e2307226338</uuid>
+            <name>Templates</name>
+        </template_group>
+    </template_groups>
+    <templates>
+        <template>
+            <uuid>2ba394ad5d144f0c8ef3dd478d231ae2</uuid>
+            <template>Q-SYS</template>
+            <name>Q-SYS</name>
+            <description>Used for monitoring networked AV equipment by Q-SYS</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <items>
+                <item>
+                    <uuid>33d9c8050c51451e9b5f45c0e982af01</uuid>
+                    <name>Load Average: 1 Minute Status</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2021.10.1.100.1</snmp_oid>
+                    <key>laErrorFlag1</key>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <units>%</units>
+                    <valuemap>
+                        <name>Alarm state</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>System</tag>
+                            <value>Load Average Error Status</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>2e00b4f2eff14f3cb616c19f5e8b1e8c</uuid>
+                    <name>Load Average: 5 Minute Status</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2021.10.1.100.2</snmp_oid>
+                    <key>laErrorFlag2</key>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <units>%</units>
+                    <valuemap>
+                        <name>Alarm state</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>System</tag>
+                            <value>Load Average Error Status</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>bb51580dec81428e91d1b521288a4db5</uuid>
+                    <name>Load Average: 15 Minute Status</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2021.10.1.100.3</snmp_oid>
+                    <key>laErrorFlag3</key>
+                    <history>7d</history>
+                    <trends>0</trends>
+                    <units>%</units>
+                    <valuemap>
+                        <name>Alarm state</name>
+                    </valuemap>
+                    <tags>
+                        <tag>
+                            <tag>System</tag>
+                            <value>Load Average Error Status</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>7bd67be1c3a342239ebc8bea02a10660</uuid>
+                    <name>Load Average: 1 Minute</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2021.10.1.6.1</snmp_oid>
+                    <key>laLoadFloat1</key>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <trends>0</trends>
+                    <units>%</units>
+                    <tags>
+                        <tag>
+                            <tag>System</tag>
+                            <value>Load Averages</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>d7b36c8c5e314a7683a58554eb575edf</uuid>
+                    <name>Load Average: 5 Minutes</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2021.10.1.6.2</snmp_oid>
+                    <key>laLoadFloat2</key>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <trends>0</trends>
+                    <units>%</units>
+                    <tags>
+                        <tag>
+                            <tag>System</tag>
+                            <value>Load Averages</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>fadf351bc469454e97171b4396316856</uuid>
+                    <name>Load Average: 15 Minutes</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>1.3.6.1.4.1.2021.10.1.6.3</snmp_oid>
+                    <key>laLoadFloat3</key>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <trends>0</trends>
+                    <units>%</units>
+                    <tags>
+                        <tag>
+                            <tag>System</tag>
+                            <value>Load Averages</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>96f307abf23e4807932f046bab420900</uuid>
+                    <name>Free Memory</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.2021.4.6.0</snmp_oid>
+                    <key>memAvailReal</key>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <trends>0</trends>
+                    <units>B</units>
+                    <description>The total amount of real/physical memory installed on this host</description>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <parameters>
+                                <parameter>1024</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <tags>
+                        <tag>
+                            <tag>Hardware</tag>
+                            <value>Memory</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>6e1f3927d3424879b1e3156c46ba7e61</uuid>
+                    <name>Percentage Free Memory</name>
+                    <type>CALCULATED</type>
+                    <key>memPercentFree</key>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <trends>0</trends>
+                    <units>%</units>
+                    <params>100 * last(//memAvailReal) / last(//memTotalReal)</params>
+                    <tags>
+                        <tag>
+                            <tag>Hardware</tag>
+                            <value>Memory</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>cc6b3bdac5ca42e58e682bb6cea4f87b</uuid>
+                            <expression>last(/Q-SYS/memPercentFree)&lt;10</expression>
+                            <name>Free memory on {HOST.NAME} is below 10%</name>
+                            <url>http://{HOST.IP}/status</url>
+                            <priority>INFO</priority>
+                            <description>The current percentage of free memory on {HOST.NAME} is: &quot;{ITEM.VALUE}&quot;
+
+Please check the Q-SYS device at: http://{HOST.IP}/status</description>
+                            <tags>
+                                <tag>
+                                    <tag>problem</tag>
+                                    <value>q-sys</value>
+                                </tag>
+                            </tags>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>73751327356a4022bf428e69211e5b6b</uuid>
+                    <name>Total Memory</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>.1.3.6.1.4.1.2021.4.5.0</snmp_oid>
+                    <key>memTotalReal</key>
+                    <delay>1h</delay>
+                    <history>7d</history>
+                    <value_type>FLOAT</value_type>
+                    <trends>0</trends>
+                    <units>B</units>
+                    <description>The total amount of real/physical memory installed on this host</description>
+                    <preprocessing>
+                        <step>
+                            <type>MULTIPLIER</type>
+                            <parameters>
+                                <parameter>1024</parameter>
+                            </parameters>
+                        </step>
+                        <step>
+                            <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                            <parameters>
+                                <parameter>1d</parameter>
+                            </parameters>
+                        </step>
+                    </preprocessing>
+                    <tags>
+                        <tag>
+                            <tag>Hardware</tag>
+                            <value>Memory</value>
+                        </tag>
+                    </tags>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <uuid>29f6f51c515b4ecda84016095969b8f0</uuid>
+                    <name>Device Info</name>
+                    <type>SNMP_AGENT</type>
+                    <snmp_oid>discovery[{#SNMPVALUE},.1.3.6.1.4.1.1536.1.2.2.2.1.1.2,{#AVTYPE},.1.3.6.1.4.1.1536.1.2.2.2.1.1.3]</snmp_oid>
+                    <key>inDeviceInfo</key>
+                    <lifetime>30d</lifetime>
+                    <enabled_lifetime_type>DISABLE_NEVER</enabled_lifetime_type>
+                    <item_prototypes>
+                        <item_prototype>
+                            <uuid>e9f8e66df521406181d98dc257ab6f37</uuid>
+                            <name>Device Location</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.1536.1.2.2.2.1.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>inDeviceLocation[{#SNMPINDEX}]</key>
+                            <delay>1h</delay>
+                            <history>90d</history>
+                            <value_type>TEXT</value_type>
+                            <trends>0</trends>
+                            <preprocessing>
+                                <step>
+                                    <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                                    <parameters>
+                                        <parameter>1d</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <tags>
+                                <tag>
+                                    <tag>{#AVTYPE}</tag>
+                                    <value>Device: {#SNMPVALUE}</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>d84cbaca186744c4832e08322ce780bf</uuid>
+                            <name>Device Model</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.1536.1.2.2.2.1.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>inDeviceModel[{#SNMPINDEX}]</key>
+                            <delay>1h</delay>
+                            <history>90d</history>
+                            <value_type>TEXT</value_type>
+                            <trends>0</trends>
+                            <preprocessing>
+                                <step>
+                                    <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                                    <parameters>
+                                        <parameter>1d</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <tags>
+                                <tag>
+                                    <tag>{#AVTYPE}</tag>
+                                    <value>Device: {#SNMPVALUE}</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>707d93103f924022a243a842cae3711a</uuid>
+                            <name>Device Name</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.1536.1.2.2.2.1.1.2.{#SNMPINDEX}</snmp_oid>
+                            <key>inDeviceName[{#SNMPINDEX}]</key>
+                            <delay>1h</delay>
+                            <history>90d</history>
+                            <value_type>TEXT</value_type>
+                            <trends>0</trends>
+                            <preprocessing>
+                                <step>
+                                    <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                                    <parameters>
+                                        <parameter>1d</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <tags>
+                                <tag>
+                                    <tag>{#AVTYPE}</tag>
+                                    <value>Device: {#SNMPVALUE}</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>e218b5d758b242528400fb6cd7133fde</uuid>
+                            <name>Device Status Value</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.1536.1.2.2.2.1.1.7.{#SNMPINDEX}</snmp_oid>
+                            <key>inDeviceStatusValue[{#SNMPINDEX}]</key>
+                            <history>90d</history>
+                            <value_type>TEXT</value_type>
+                            <trends>0</trends>
+                            <preprocessing>
+                                <step>
+                                    <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                                    <parameters>
+                                        <parameter>1d</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <tags>
+                                <tag>
+                                    <tag>{#AVTYPE}</tag>
+                                    <value>Device: {#SNMPVALUE}</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>41210b5e870d4a94b4da596f1a920d3d</uuid>
+                            <name>Device Status</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.1536.1.2.2.2.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>inDeviceStatus[{#SNMPINDEX}]</key>
+                            <history>90d</history>
+                            <value_type>TEXT</value_type>
+                            <trends>0</trends>
+                            <preprocessing>
+                                <step>
+                                    <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                                    <parameters>
+                                        <parameter>1d</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <tags>
+                                <tag>
+                                    <tag>{#AVTYPE}</tag>
+                                    <value>Device: {#SNMPVALUE}</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>0259d6972d7b40abaebdb02ce60a5471</uuid>
+                            <name>Device Type</name>
+                            <type>SNMP_AGENT</type>
+                            <snmp_oid>.1.3.6.1.4.1.1536.1.2.2.2.1.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>inDeviceType[{#SNMPINDEX}]</key>
+                            <delay>1h</delay>
+                            <history>90d</history>
+                            <value_type>TEXT</value_type>
+                            <trends>0</trends>
+                            <preprocessing>
+                                <step>
+                                    <type>DISCARD_UNCHANGED_HEARTBEAT</type>
+                                    <parameters>
+                                        <parameter>1d</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                            <tags>
+                                <tag>
+                                    <tag>{#AVTYPE}</tag>
+                                    <value>Device: {#SNMPVALUE}</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <uuid>3cf592abb5254b00b1cea9dde93ea9c1</uuid>
+                            <expression>last(/Q-SYS/inDeviceStatusValue[{#SNMPINDEX}])&lt;&gt;0 or last(/Q-SYS/inDeviceStatus[{#SNMPINDEX}])=&quot;XXXX&quot;</expression>
+                            <name>Problem with {#SNMPVALUE} on {HOST.NAME}</name>
+                            <url>http://{HOST.IP}/status</url>
+                            <priority>WARNING</priority>
+                            <description>The {#SNMPVALUE} status has changed to: &quot;{ITEM.VALUE2}&quot;
+
+Please check the Q-SYS device immediately at: http://{HOST.IP}/status</description>
+                            <tags>
+                                <tag>
+                                    <tag>problem</tag>
+                                    <value>q-sys</value>
+                                </tag>
+                            </tags>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+            <tags>
+                <tag>
+                    <tag>class</tag>
+                    <value>hardware</value>
+                </tag>
+                <tag>
+                    <tag>manufacturer</tag>
+                    <value>Q-SYS</value>
+                </tag>
+                <tag>
+                    <tag>target</tag>
+                    <value>AV-Equipment</value>
+                </tag>
+            </tags>
+            <valuemaps>
+                <valuemap>
+                    <uuid>8a5c33786c1640d58fa4db77cc0da116</uuid>
+                    <name>Alarm state</name>
+                    <mappings>
+                        <mapping>
+                            <value>0</value>
+                            <newvalue>Ok</newvalue>
+                        </mapping>
+                        <mapping>
+                            <value>1</value>
+                            <newvalue>Alarm</newvalue>
+                        </mapping>
+                    </mappings>
+                </valuemap>
+            </valuemaps>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <uuid>c2b3b3187a944a3e906a82c4e4c42f45</uuid>
+            <expression>last(/Q-SYS/laErrorFlag1)&lt;&gt;0 or last(/Q-SYS/laErrorFlag2)&lt;&gt;0 or last(/Q-SYS/laErrorFlag3)&lt;&gt;0</expression>
+            <name>Excessive load on {HOST.NAME}</name>
+            <url>http://{HOST.IP}/status</url>
+            <priority>WARNING</priority>
+            <description>Please check the Q-SYS device immediately at: http://{HOST.IP}/status</description>
+            <tags>
+                <tag>
+                    <tag>problem</tag>
+                    <value>q-sys</value>
+                </tag>
+            </tags>
+        </trigger>
+    </triggers>
+</zabbix_export>
